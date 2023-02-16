@@ -4,7 +4,7 @@ import {
   getPayload,
   verifyCoseSign1Address,
   verifyCoseSign1Signature,
-} from './utils';
+} from './auth-utils';
 
 export class Web3Authentication {
   constructor(private readonly expirationTimeSpan: number, private readonly hostname: string) {}
@@ -61,4 +61,5 @@ export type Web3AuthenticationOptions = {
   action: string;
 };
 
-export * from './utils';
+export * as authUtils from './auth-utils';
+export * as testUtils from './test-utils';

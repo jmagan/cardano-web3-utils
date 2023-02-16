@@ -3,12 +3,9 @@
   "version": "1.0.4",
   "description": "Cardano utils for web3 apps",
   "files": [
-    "lib/**/*"
+    "./lib/**/*"
   ],
-  "exports": {
-    ".": "./lib/index.js",
-    "./utils": "./lib/utils.js"
-  },
+  "main": "./lib/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest --config jestconfig.json",
