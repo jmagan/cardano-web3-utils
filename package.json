@@ -1,6 +1,6 @@
 {
   "name": "cardano-web3-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cardano utils for web3 apps",
   "main": "./lib",
   "files": [
