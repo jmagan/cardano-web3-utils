@@ -60,3 +60,5 @@ export type Web3AuthenticationOptions = {
   expirationTimeSpan?: number;
   action: string;
 };
+
+export * from './utils';
