@@ -58,7 +58,6 @@ export type Web3AuthenticationPayload = {
 
 export type Web3AuthenticationOptions = {
   expirationTimeSpan?: number;
-  action: string;
 };
 
 export * as authUtils from './auth-utils';
