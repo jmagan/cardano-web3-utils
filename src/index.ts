@@ -9,14 +9,14 @@ import {
 export class Web3Authentication {
   constructor(private readonly expirationTimeSpan: number, private readonly hostname: string) {}
 
-  public authenticate(
+  public authenticate<T>(
     url: string,
     action: string,
     key: string,
     signature: string,
     options?: Web3AuthenticationOptions,
-  ): { payload: Web3AuthenticationPayload; walletAddress: string } {
-    const payload = getPayload(signature);
+  ): { payload: Web3AuthenticationPayload & T; walletAddress: string } {
+    const payload = getPayload(signature) as Web3AuthenticationPayload & T;
 
     if (!checkExpiration(payload, options?.expirationTimeSpan ? options.expirationTimeSpan : this.expirationTimeSpan)) {
       throw new Web3AuthenticationError('Expired timestamp', 401);
