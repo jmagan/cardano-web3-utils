@@ -47,3 +47,9 @@ Verifies the integrity of a COSE_Sign1 signature using the provided key.
 * `createFakePrivateKey(accountNumber: number)`: Creates a fake private key for mocking purposes.
 
 * `createRewardAddress(privateKey: CSL.PrivateKey, networkId: CSL.NetworkId)`: Creates a reward address from a private key and network ID.
+
+## Support
+
+If you find it useful, please consider inviting me a coffee :)
+
+[![DoItWithLovelace](https://app.doitwithlovelace.io/api/og/assets/donationButton)](https://app.doitwithlovelace.io/users/DoItWithLovelace)
