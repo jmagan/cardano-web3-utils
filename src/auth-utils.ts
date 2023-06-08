@@ -57,7 +57,7 @@ export function getPayload(signature: string) {
 
   const payload = JSON.parse(Buffer.from(bPayload).toString()) as Web3AuthenticationPayload;
 
-  if (payload.action === undefined || payload.timestamp === undefined || payload.url === undefined) {
+  if (payload.action === undefined || payload.timestamp === undefined || payload.uri === undefined) {
     throw new Error('Invalid payload');
   }
 

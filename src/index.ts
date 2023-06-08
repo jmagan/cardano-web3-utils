@@ -10,7 +10,7 @@ export class Web3Authentication {
   constructor(private readonly expirationTimeSpan: number, private readonly hostname: string) {}
 
   public authenticate<T>(
-    url: string,
+    uri: string,
     action: string,
     key: string,
     signature: string,
@@ -26,8 +26,8 @@ export class Web3Authentication {
       throw new Web3AuthenticationError('Invalid action', 401);
     }
 
-    if (this.hostname + url !== payload.url) {
-      throw new Web3AuthenticationError('Invalid url', 401);
+    if (this.hostname + uri !== payload.uri) {
+      throw new Web3AuthenticationError('Invalid uri', 401);
     }
 
     if (!verifyCoseSign1Signature(key, signature)) {
@@ -50,7 +50,7 @@ export class Web3AuthenticationError extends Error {
 }
 
 export type Web3AuthenticationPayload = {
-  url: string;
+  uri: string;
   action: string;
   timestamp: number;
   [property: string]: unknown;
