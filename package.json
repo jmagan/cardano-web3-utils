@@ -21,7 +21,10 @@
     "web3",
     "authentication",
     "message",
-    "signing"
+    "signing",
+    "CIP",
+    "93",
+    "CIP-0093"
   ],
   "author": "Juan Salvador Magán Valero <jmaganvalero@gmail.com>",
   "repository": {
